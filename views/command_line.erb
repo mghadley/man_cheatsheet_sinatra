@@ -1,0 +1,7 @@
+<h2>What would you like to see the man pages for?</h2>
+
+<ul>
+	<% @commands.each do |com| %>
+		<li><a href="/show?input=<%= com %>"><%= com %></a></li>
+	<% end %>
+</ul>
