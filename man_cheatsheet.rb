@@ -9,7 +9,7 @@ get '/' do
 end
 
 get '/show' do
-	@results = `man #{params[:input]}`.gsub(/\n/, '<br>')
+	@results = `man #{params[:input]} | col -b`.gsub(/\n/, '<br>')
 	erb :results
 end
 
